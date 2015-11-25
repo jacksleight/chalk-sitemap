@@ -1,7 +1,7 @@
-# Chalk Article
+# Chalk Sitemap
 
-[![Packagist](http://img.shields.io/packagist/v/jacksleight/chalk-article.svg?style=flat-square)](https://packagist.org/packages/jacksleight/chalk-article)
-[![License](http://img.shields.io/packagist/l/jacksleight/chalk-article.svg?style=flat-square)](https://packagist.org/packages/jacksleight/chalk-article)
+[![Packagist](http://img.shields.io/packagist/v/jacksleight/chalk-sitemap.svg?style=flat-square)](https://packagist.org/packages/jacksleight/chalk-sitemap)
+[![License](http://img.shields.io/packagist/l/jacksleight/chalk-sitemap.svg?style=flat-square)](https://packagist.org/packages/jacksleight/chalk-sitemap)
 
 ## Licence
 
