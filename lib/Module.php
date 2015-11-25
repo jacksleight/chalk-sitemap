@@ -44,6 +44,12 @@ class Module extends ChalkModule
                     'controller' => 'sitemap',
                     'action'     => 'xml',
                 ]);
-    }
 
+        $this
+            ->frontendHookListen('core_robots', function($robots) {
+                $url = $this->frontend->url->route([], $this->name('xml'), true);
+                array_unshift($robots->lines, "Sitemap: {$url}\n");
+                return $robots;
+            });
+    }
 }
