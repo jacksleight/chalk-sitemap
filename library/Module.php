@@ -18,7 +18,7 @@ use Coast\Router;
 
 class Module extends ChalkModule
 {   
-    const VERSION = '0.5.0';
+    const VERSION = '0.6.0';
 
     protected $_options = [];
 
