@@ -17,7 +17,7 @@ class Sitemap extends Action
 {
     public function xml(Request $req, Response $res)
     {
-        $sitemap = $this->hook->fire($this->module->name('xml'), new CoastSitemap());
+        $sitemap = $this->hook->fire('sitemap_xml', new CoastSitemap());
         return $res->xml($sitemap->toXml());
     }
 }

@@ -18,6 +18,7 @@ use Coast\Router;
 
 class Module extends ChalkModule
 {   
+    const NAME    = 'sitemap';
     const VERSION = '0.6.0';
 
     protected $_options = [];
@@ -27,27 +28,27 @@ class Module extends ChalkModule
     public function init()
     {
         $this
-            ->entityDir($this->name());
+            ->entityDir('sitemap');
     }
     
     public function frontendInit()
     {
         $this
-            ->frontendControllerNspace($this->name());
+            ->frontendControllerNspace('sitemap');
 
         $this
             ->frontendRoute(
-                $this->name('xml'),
+                'sitemap_xml',
                 Router::METHOD_ALL,
                 "sitemap.xml", [
-                    'group'      => $this->name(),
+                    'group'      => 'sitemap',
                     'controller' => 'sitemap',
                     'action'     => 'xml',
                 ]);
 
         $this
             ->frontendHookListen('core_robots', function($robots) {
-                $url = $this->frontend->url->route([], $this->name('xml'), true);
+                $url = $this->frontend->url->route([], 'sitemap_xml', true);
                 array_unshift($robots->lines, "Sitemap: {$url}\n");
                 return $robots;
             });
