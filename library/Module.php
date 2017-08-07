@@ -19,7 +19,7 @@ use Coast\Router;
 class Module extends ChalkModule
 {   
     const NAME    = 'sitemap';
-    const VERSION = '0.6.0';
+    const VERSION = '0.7.0';
 
     protected $_options = [];
 
